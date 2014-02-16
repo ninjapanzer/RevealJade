@@ -1,23 +1,19 @@
 {
-  "name": "SVC-slides",
+  "name": "RevealJade",
   "version": "0.0.0",
   "description": "",
-  "homepage": "https://github.com/ninjapanzer/SVC-lecture-series",
-  "subdomain": "revealjs",
-  "scripts": {
-    "test": "grunt test",
-    "start": ""
-  },
+  "homepage": "https://github.com/ninjapanzer/RevealJade",
+  "subdomain": "revealjade",
   "author": {
     "name": "Paul Scarrone",
     "email": "paul.scarrone@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ninjapanzer/SVC-lecture-series.git"
+    "url": "git@github.com:ninjapanzer/RevealJade"
   },
   "engines": {
-    "node": "~0.8.0"
+    "node": "~0.10.0"
   },
   "dependencies": {
   },
