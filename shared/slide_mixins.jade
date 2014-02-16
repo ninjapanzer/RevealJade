@@ -1,0 +1,45 @@
+include fragment_mixins
+
+mixin titleSlide(titleData, attrs)
+  +slide(attrs)
+    h1
+      = titleData.title
+    h3 
+      = titleData.subtitle
+    p
+      small
+        | Paul Scarrone
+        br
+        | @PaulSCoders
+    aside.notes
+      | Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+
+mixin ulSlide(title, list, attrs)
+  +slide(attrs)
+    h3= title
+    +ul(list)
+    block
+
+mixin olSlide(title, list, attrs)
+  +slide(attrs)
+    h3= title
+    +ol(list)
+    block
+
+mixin bigTitleSlide(title, attrs)
+  +slide(attrs)
+    h1= title
+    block
+
+mixin littleTitleSlide(title, attrs)
+  +slide(attrs)
+    h3= title
+    block
+
+mixin slide(attrs)
+  section&attributes(attrs == Object ? attrs : {})
+    block
+
+mixin slideGroup(attrs)
+  +slide(attrs)
+    block

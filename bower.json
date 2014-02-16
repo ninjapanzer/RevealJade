@@ -1,0 +1,19 @@
+{
+  "name": "SVC-slides",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ninjapanzer/SVC-lecture-series",
+  "authors": [
+    "Paul Scarrone"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~2.6.1"
+  }
+}

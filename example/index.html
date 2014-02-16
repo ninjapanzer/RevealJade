@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Agile Development with Github</title>
+    <meta name="description" content="">
+    <meta name="author" content="Paul Scarrone">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.min.css">
+    <link id="theme" rel="stylesheet" href="../bower_components/reveal.js/css/theme/moon.css">
+    <!-- For syntax highlighting-->
+    <link rel="stylesheet" href="../bower_components/reveal.js/lib/css/zenburn.css">
+    <script src="//localhost:35729/livereload.js"></script>
+    <script>var revealLocation = '../bower_components/reveal.js/'</script>
+    <script type="text/javascript">document.write( '<link rel="stylesheet" href="' + revealLocation + 'css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script>
+    <!--if lt IE 9script(src= revealLocation + 'lib/js/html5shiv.js')
+    -->
+  </head>
+  <link rel="external" type="text/html" src="../shared/head.jade">
+  <body>
+    <div class="reveal">
+      <div class="slides">
+            <section>
+              <h1>Quick Presentations With RevealJade
+              </h1>
+              <h3>I know right?
+              </h3>
+              <p><small>Paul Scarrone<br>@PaulSCoders</small></p>
+              <aside class="notes">Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).</aside>
+            </section>
+            <section>
+              <h3>Get Started</h3>
+                <ul>
+                  <li>npm install -g bower grunt</li>
+                  <li>npm install</li>
+                  <li>bower install</li>
+                  <li>grunt serve</li>
+                  <li>go to localhost:8000/example/</li>
+                </ul>
+            </section>
+            <section>
+              <h1>I am a big title slide</h1>
+              <p>Enjoy</p>
+            </section>
+          <section>
+            <p>This is a normal Slide. Just nest jade under me</p>
+          </section>
+            <section>
+                  <section>
+                    <h1>First Slide in a group</h1>
+                  </section>
+                  <section>
+                    <h1>Last Slide in a group</h1>
+                  </section>
+            </section>
+          <section><h1 id="markdown-flavored-slide">Markdown flavored Slide</h1>
+<h2 id="thank-you-jade">Thank you Jade</h2>
+
+          </section>
+      </div>
+    </div>
+    <script type="text/javascript" src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script type="text/javascript" src="../bower_components/reveal.js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+       Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'moon',
+        slideNumber: true,
+        transition: 'concave',
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: revealLocation + 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: revealLocation + 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: revealLocation + 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: revealLocation + 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: revealLocation + 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+       });
+    </script>
+  </body>
+</html>
