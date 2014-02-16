@@ -1,7 +1,7 @@
 RevealJade
 ==========
 
-Jade based utilities for creating a RevealJS presentation
+Jade based utilities for creating a [Reveal.js](https://github.com/hakimel/reveal.js) presentation
 
 ## About
 
