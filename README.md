@@ -1,11 +1,11 @@
 RevealJade
 ==========
 
-Jade based utilities for creating a [Reveal.js](https://github.com/hakimel/reveal.js) presentation
+[Jade](https://github.com/visionmedia/jade) alternative utilities for creating a [Reveal.js](https://github.com/hakimel/reveal.js) presentation.
 
 ## About
 
-This is an implementation of [Reveal.js](https://github.com/hakimel/reveal.js) that simplifes the creation of presentations by treating it as a bower dependency and allowing allowing you to generate you presentation markdown with Jade.
+This is an implementation of [Reveal.js](https://github.com/hakimel/reveal.js) that simplifes the creation of presentations by treating it as a bower dependency and allowing you to generate you presentation markup with Jade.
 
 To further simply markup this also includes some common slide style mixins. All slides also accept Jade blocks so they are intended to be loose or unnessecary to use.
 
@@ -22,3 +22,25 @@ To further simply markup this also includes some common slide style mixins. All 
 8. Create a new folder and put your index.jade in there
 9. include header and footer like in the example
 10. Enjoy!
+
+## The Mixins
+
+### ulSlide
+
+Takes a `String:`title and `Array:`list arguments to create a slide with an uordered list
+
+### olSlide
+
+Takes a `String:`title and `Array:`list arguments to create a slide with an ordered list
+
+### slide
+
+The basis of all slides and accepts a Jade block
+
+### bigTitleSlide
+
+Takes a `String:`title and accepts a jade block to produce a slide with a `<H1>` title
+
+### littleTitleSlide
+
+Takes a `String:`title and accepts a jade block to produce a slide with a `<H3>` title
