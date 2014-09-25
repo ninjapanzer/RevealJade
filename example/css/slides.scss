@@ -1,0 +1,28 @@
+div.left{
+
+}
+
+section{
+  strong{
+    color: #60D9F1;
+  }
+}
+
+section.unmarked{
+  ul{
+    list-style-type: none;
+  }
+}
+
+quote{
+  &:before{
+    content:'"';
+  }
+  &:after{
+    content:'"';
+  }
+}
+
+.ul-color.white{
+  color:white;
+}

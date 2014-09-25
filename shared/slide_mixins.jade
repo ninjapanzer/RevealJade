@@ -7,12 +7,14 @@ mixin titleSlide(titleData, attrs)
     h3 
       = titleData.subtitle
     p
-      small
-        | Paul Scarrone
-        br
-        | @PaulSCoders
+      div.left
+        small Paul Scarrone
+      div.left
+        small.twitter @PaulSCoders
+      div.left
+        small.email paul.scarrone@gmail.com
     aside.notes
-      | Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+      | Title Slide
 
 mixin ulSlide(title, list, attrs)
   +slide(attrs)
@@ -20,10 +22,22 @@ mixin ulSlide(title, list, attrs)
     +ul(list)
     block
 
+mixin ulFragmentSlide(title,list,attrs)
+  +slide(attrs)
+    h3= title
+    +ulFragment(list)
+    block
+
 mixin olSlide(title, list, attrs)
   +slide(attrs)
     h3= title
     +ol(list)
+    block
+
+mixin olFragmentSlide(title,list,attrs)
+  +slide(attrs)
+    h3= title
+    +olFragment(list)
     block
 
 mixin bigTitleSlide(title, attrs)
@@ -37,9 +51,13 @@ mixin littleTitleSlide(title, attrs)
     block
 
 mixin slide(attrs)
-  section&attributes(attrs == Object ? attrs : {})
+  section&attributes(typeof(attrs) == 'object' ? attrs : {})
     block
 
 mixin slideGroup(attrs)
   +slide(attrs)
+    block
+
+mixin speakerNotes(attrs)
+  aside.notes&attributes(typeof(attrs) == 'object' ? attrs : {})
     block
