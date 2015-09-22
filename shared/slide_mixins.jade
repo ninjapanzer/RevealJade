@@ -2,17 +2,15 @@ include fragment_mixins
 
 mixin titleSlide(titleData, attrs)
   +slide(attrs)
-    h1
-      = titleData.title
-    h3
-      = titleData.subtitle
+    h1= titleData.title
+    h3= titleData.subtitle
     p
       div.left
-        small titleData.author
+        small= titleData.author
       div.left
-        small.twitter titleData.twitter
+        small.twitter= titleData.twitter
       div.left
-        small.email titleData.email
+        small.email= titleData.email
     aside.notes
       | Title Slide
 
