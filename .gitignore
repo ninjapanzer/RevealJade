@@ -3,3 +3,6 @@ node_modules
 bower_components
 **/*.html
 !example/index.html
+bower_components
+.bundle
+*.html

@@ -1,14 +1,13 @@
 head
   meta(charset='utf-8')
-  title Agile Development with Github
+  title= titleData.title
   meta(name='description', content='')
-  meta(name='author', content='Paul Scarrone')
+  meta(name='author', content= titleData.author)
   meta(name='apple-mobile-web-app-capable', content='yes')
   meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-  link(rel='stylesheet', href= revealLocation + 'css/reveal.min.css')
+  link(rel='stylesheet', href= revealLocation + 'css/reveal.css')
   link#theme(rel='stylesheet', href= revealLocation +'css/theme/moon.css')
-  link(rel='stylesheet', href= 'css/slides.css')
   // For syntax highlighting
   link(rel='stylesheet', href= revealLocation + 'lib/css/zenburn.css')
   script(src="//localhost:35729/livereload.js")
@@ -17,4 +16,8 @@ head
   //if lt IE 9
     script(src= revealLocation + 'lib/js/html5shiv.js')
 
-  script(type='text/javascript') document.write( '<link rel="stylesheet" href="' + revealLocation + 'css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  script.
+    document.write( '<link rel="stylesheet" href="' + revealLocation + 'css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    if(window.location.search.match( /print-pdf/gi )){
+      document.write('<style>.reveal aside.notes{display:block;font-size:0.4em;}.reveal aside.notes:before{content: "Notes: ";font-weight: bold;}</style>');
+    }
