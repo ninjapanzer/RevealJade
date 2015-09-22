@@ -8,11 +8,11 @@ mixin titleSlide(titleData, attrs)
       = titleData.subtitle
     p
       div.left
-        small Paul Scarrone
+        small titleData.author
       div.left
-        small.twitter @PaulSCoder
+        small.twitter titleData.twitter
       div.left
-        small.email paul.scarrone@gmail.com
+        small.email titleData.email
     aside.notes
       | Title Slide
 
