@@ -59,3 +59,9 @@ mixin slideGroup(attrs)
 mixin speakerNotes(attrs)
   aside.notes&attributes(typeof(attrs) == 'object' ? attrs : {})
     block
+
+mixin imageSlide(title, path, attrs)
+  +slide(attrs)
+    h3= title
+    img(src=path)
+    block
