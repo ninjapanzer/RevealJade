@@ -12,10 +12,10 @@ mixin note(note)
   div= note
     block
 
-mixin codeBlock(attrs)
-  - opts= typeof(attrs) == 'object' ? attrs : {}
-  - opts['data-trim']= attrs['data-trim'] || ''
-  - opts['contenteditable']= attrs['contenteditable'] || ''
+mixin codeBlockFragment(attrs)
+  - attrs= typeof(attrs) == 'object' ? attrs : {}
+  - attrs['class'] = attrs['class'] || ''
+  - attrs['contenteditable']= attrs['contenteditable'] || false
   pre
     code&attributes(typeof(attrs) == 'object' ? attrs : {})
       block
