@@ -36,6 +36,7 @@ If you have already created a gh-pages branch in your repo you may run the inclu
 
 ## Examples
 [Git to the Future](https://github.com/WestmorelandOSS/git_to_the_future)
+
 [Be the Middleman](https://github.com/WestmorelandOSS/be_the_middleman)
 
 ## The Mixins
