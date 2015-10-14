@@ -7,21 +7,21 @@ RevealJade
 
 This is an implementation of [Reveal.js](https://github.com/hakimel/reveal.js) that simplifes the creation of presentations by treating it as a bower dependency and allowing you to generate you presentation markup with Jade.
 
-To further simply markup this also includes some common slide style mixins. All slides also accept Jade blocks so they are intended to be loose or unnessecary to use.
+To further simply markup this also includes some common slide style mixins. All slides also accept Jade blocks so they are intended to be loose or unnessecary to use. All sides also can inline markdown with the `:markdown` filter inline.
 
 
 ## Setup
 
-1. Clone Repo
-2. Install NodeJS ~0.10 if you don't have it
-3. `npm install -g grunt bower`
-4. `npm install`
-5. `bower install`
-6. `grunt serve`
+1. Clone Repo / or download a [Release](https://github.com/ninjapanzer/RevealJade/releases)
+2. Requires [Node.js](https://nodejs.org/en/) and NPM
+3. Install grunt and bower `npm install -g grunt bower`
+4. Install compiletime dependencies `npm install`
+5. Install runtime `bower install`
+6. Run the development server `grunt serve` (Live Reload enabled)
 7. Checkout the example page at localhost:8000/example
-8. Create a new folder and put your index.jade in there
-9. include header and footer like in the example
-10. Enjoy!
+8. Modify the index.jade for your new presentation
+9. When you are ready to deploy create a git repo on Github with a `gh-pages` branch and run `./bin/deploy.sh`
+11. Enjoy!
 
 ## Deployment
 
