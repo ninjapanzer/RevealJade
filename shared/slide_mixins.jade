@@ -65,3 +65,14 @@ mixin imageSlide(title, path, attrs)
     h3= title
     img(src=path)
     block
+
+mixin codeBlockSlide(attrs)
+  +slide(attrs)
+    +codeBlockFragment(attrs)
+      block
+
+mixin codeIncludeSlide(title, attrs)
+  +slide(attrs)
+    h3= title
+    +codeBlockFragment(attrs)
+      block
