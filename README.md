@@ -34,6 +34,10 @@ If you have already created a gh-pages branch in your repo you may run the inclu
 3. `./bin/deploy.sh`
 4. go to `https://<github-username>.github.io/<git-repo-name>` to see your slides (Sometimes takes 10 minutes)
 
+## Examples
+[Git to the Future](https://github.com/WestmorelandOSS/git_to_the_future)
+[Be the Middleman](https://github.com/WestmorelandOSS/be_the_middleman)
+
 ## The Mixins
 
 All slides accept an `attr` object which provides attributes to the elements within the slide like `class` and other RevealJS per slide options.
