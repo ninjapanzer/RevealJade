@@ -44,21 +44,71 @@ Slide mixins can be overridden by creating a new jade file in your project with 
 
 The basic unit of organization. Almost any contents can be contained within a `+slide`. It accepts a jade block most slides are built off this container.
 
+##### Example
+```
++slide
+  h3= "Hello"
+```
+
 ### +slideGroup
 
 The RevealJS organizational unit which provides vertical columns of slides a `+slideGroup` accepts a jade block of `+slides`.
+
+##### Example
+```
++slideGroup
+  +slide
+    h3= "Hello"
+```
 
 ### +speakerNotes
 
 A special use container that can be nested within any slide that provides it with a Speaker notes container visible when `s` is pressed during the presentation.
 
+##### Example
+```
++slide
+  h3= "Hello"
+  +speakerNotes
+    :markdown
+      - Great slide with great info
+```
+
 ### +ulSlide
 
 Takes a `String:`title and `Array:`list arguments to create a slide with an unordered list.
 
+##### Example
+```
++ulSlide("Great List", ["item 1", "item 2"])
+```
+
+##### Markdown Example
+To be honest this can also be accomplished with the markdown filter
+```
++slide
+  :markdown
+    - item 1
+    - item 2
+```
+
 ### +olSlide
 
 Takes a `String:`title and `Array:`list arguments to create a slide with an ordered list.
+
+##### Example
+```
++olSlide("Great List", ["item 1", "item 2"])
+```
+
+##### Markdown Example
+To be honest this can also be accomplished with the markdown filter
+```
++slide
+  :markdown
+    1. item 1
+    2. item 2
+```
 
 ### +titleSlide
 
@@ -83,22 +133,62 @@ h1= titleData.title
       | Title Slide
 ```
 
+##### Example
+```
++titleSlide
+```
+
 ### +bigTitleSlide
 
 Takes a `String:`title and accepts a jade block to produce a slide with a `<H1>` title.
+
+##### Example
+```
++bigTitleSlide("Really Important title")
+  :markdown
+    Examples of this can be seen with a markdown inline
+```
 
 ### +littleTitleSlide
 
 Takes a `String:`title and accepts a jade block to produce a slide with a `<H3>` title.
 
+##### Example
+```
++littleTitleSlide("Less Important title")
+  :markdown
+    Examples of this can be seen with a markdown inline
+```
+
 ### +imageSlide
 
 Takes `String:`title, `String:`relative image path, and accepts a jade block to produce a slide with a `<H3>` title and an `img` below it.
+
+##### Example
+```
++imageSlide("Lovely Little Pictures", "images/doggy_pics.jpg")
+  :markdown
+    Examples of this can be seen with a markdown inline
+```
 
 ### +codeBlockSlide
 
 A basic slide unit which takes a jade block which will be styled with highlight js.
 
+##### Example
+```
++codeBlockSlide()
+  |var func = function(){
+  |  console.log("DON'T CALL MY BUDDY, GUY")
+  |}
+```
+
 ### +codeIncludeSlide
 
-Similar to `+codeBlockSlide` takes `String:`title and accepts a jade block to produce a `+codeBlockSlide` with a title in `<h3>` The intended use to to pass and include to a code file as the block.
+Similar to `+codeBlockSlide` takes `String:`title and accepts a jade block to produce a `+codeBlockSlide` with a title in `<h3>` The intended use to to pass and include to a local code file as the block.
+
+##### Example
+```
++codeIncludeSlide("I love code")
+  include code/best_code.js
+```
