@@ -15,6 +15,7 @@ To further simply markup this also includes some common slide style mixins. All 
 1. Clone Repo / or download a [Release](https://github.com/ninjapanzer/RevealJade/releases)
 2. Requires [Node.js](https://nodejs.org/en/) and NPM
 3. Install grunt and bower `npm install -g grunt bower`
+4. Change directories to where you cloned or dowloaded the project
 4. Install compiletime dependencies `npm install`
 5. Install runtime `bower install`
 6. Run the development server `grunt serve` (Live Reload enabled)
