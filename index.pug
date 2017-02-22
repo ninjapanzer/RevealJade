@@ -1,17 +1,18 @@
-- var revealLocation = 'bower_components/reveal.js/'
+- var revealLocation = '/node_modules/reveal.js/'
 - var titleData = { title: "Title", subtitle: "Subtitle", author: "Author", twitter: "@Twitter", email: "name@domain.com" }
 doctype html
 html(lang="en")
 
   include ./shared/slide_mixins
 
-  include ./shared/head
+  //- include ./shared/head
 
   link(rel='external' type='text/html' src="./shared/head.jade")
 
   body
     .reveal
       .slides
+        - console.log(titleData);
         +titleSlide(titleData)
         +ulSlide("Get Started", [
           "npm install -g bower grunt",
@@ -19,7 +20,7 @@ html(lang="en")
           "bower install",
           "grunt serve",
           "go to localhost:8000/example/"
-          ])
+        ])
         +bigTitleSlide("I am a big title slide")
           p Enjoy
         +slide()

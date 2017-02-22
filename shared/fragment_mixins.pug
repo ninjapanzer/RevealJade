@@ -1,11 +1,11 @@
 mixin ol(list)
   ol
-    - each item in list
+    each item in list
       li= item
 
 mixin ul(list)
   ul
-    - each item in list
+    each item in list
       li= item
 
 mixin note(note)
@@ -22,10 +22,10 @@ mixin codeBlockFragment(attrs)
 
 mixin ulFragment(list)
   ul
-    - each item, i in list
+    each item, i in list
       li(class="fragment visible" data-fragment-index=i)= item
 
 mixin olFragment(list)
   ol
-    - each item, i in list
+    each item, i in list
       li(class="fragment visible" data-fragment-index=i)= item
